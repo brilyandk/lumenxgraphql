@@ -2,18 +2,15 @@
 
 namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
-use Folklore\GraphQL\Support\Mutation;
+use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
-
-class IPlatform extends Mutation
+class Platform extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'IPlatform',
+		'name'		=> 'Platform',
 	];
-	public function type()
-    {
-        return GraphQL::type('Mutation');
-	}
+	protected $inputObject = true;
+
 	public function fields()
 	{
 		return [
@@ -47,22 +44,4 @@ class IPlatform extends Mutation
 							],
 		];
 	}
-
-	public function resolve($root, $args)
-    {
-        
-        $platfrom = new Platfrom();
-        $platfrom->data = $args['system_chip'];
-		$platfrom->processor = $args['processor'];
-		$platfrom->gpu = $args['gpu'];
-		$platfrom->memory = $args['memory'];
-		$platfrom->internal_storage = $args['internal_storage'];
-		$platfrom->storage_expansion = $args['storage_expansion'];
-		$platfrom->os = $args['os'];
-		//$platfrom->main_platfrom_specification = $args['main_platfrom_specification'];
-		
-        
-        $saved = $platfrom->save();
-        return $platfrom;
-    }
 }

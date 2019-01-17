@@ -2,17 +2,14 @@
 
 namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
-use Folklore\GraphQL\Support\Mutation;
+use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
-class IDesign extends GraphQLType
+class Design extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'IDesign',
+		'name'		=> 'Design',
 	];
-	public function type()
-    {
-        return GraphQL::type('Mutation');
-	}
+	protected $inputObject = true;
 
 	public function fields()
 	{
@@ -39,23 +36,4 @@ class IDesign extends GraphQLType
 							],
 		];
 	}
-
-	public function resolve($root, $args)
-    {
-        
-        $design = new Design();
-        $design->dimensions = $args['dimensions'];
-		$design->sim_type = $args['sim_type'];
-		$design->weight = $args['weight'];
-		$design->materials = $args['materials'];
-		$design->biometrics = $args['biometrics'];
-		$design->colors = $args['colors'];
-		//$design->volte = $args['volte'];
-		//$design->main_design_specification = $args['main_design_specification'];
-		
-        
-        $saved = $design->save();
-        return $design;
-    }
-
 }

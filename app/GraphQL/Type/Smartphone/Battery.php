@@ -25,7 +25,7 @@ class Battery extends GraphQLType
                             ],
             'wireless_charging' 	=> 	[
 								'name' 	=> 'wireless_charging', 		
-								'type' 	=> Type::nonNull(Type::bool()),
+								'type' 	=> Type::nonNull(Type::boolean()),
                             ],
 		];
 	}
