@@ -26,34 +26,34 @@ class Smartphone extends GraphQLType
     {
         return [
             'battery' => [
-              'type' => Type::listOf(GraphQL::type('IBattery')),
+              'type' => Type::listOf(GraphQL::type('BatterySmartphone')),
             ],
             'camera' => [
-                'type' => Type::listOf(GraphQL::type('ICamera')),
+                'type' => Type::listOf(GraphQL::type('Camera')),
               ],
               'design' => [
-                'type' => Type::listOf(GraphQL::type('IDesign')),
+                'type' => Type::listOf(GraphQL::type('Design')),
               ],
               'cellular' => [
-                'type' => Type::listOf(GraphQL::type('ICellular')),
+                'type' => Type::listOf(GraphQL::type('CellularSM')),
               ],
               'connectivity' => [
-                'type' => Type::listOf(GraphQL::type('IConnectivity')),
+                'type' => Type::listOf(GraphQL::type('ConnectivitySM')),
               ],
               'display' => [
-                'type' => Type::listOf(GraphQL::type('IDisplay')),
+                'type' => Type::listOf(GraphQL::type('Display')),
               ],
               'design' => [
-                'type' => Type::listOf(GraphQL::type('IDesign')),
+                'type' => Type::listOf(GraphQL::type('Design')),
               ],
               'features' => [
-                'type' => Type::listOf(GraphQL::type('IFeatures')),
+                'type' => Type::listOf(GraphQL::type('Features')),
               ],
               'platform' => [
-                'type' => Type::listOf(GraphQL::type('IPlatform')),
+                'type' => Type::listOf(GraphQL::type('PlatformSM')),
               ],
               'multimedia' => [
-                'type' => Type::listOf(GraphQL::type('IMultimedia')),
+                'type' => Type::listOf(GraphQL::type('MultimediaSM')),
               ],
         ];
 

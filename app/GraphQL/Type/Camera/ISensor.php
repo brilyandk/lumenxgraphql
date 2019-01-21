@@ -14,7 +14,7 @@ class ISensor extends Mutation
 
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('Sensor');
 	}
 	
 	public function fields()

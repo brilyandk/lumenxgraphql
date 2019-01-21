@@ -2,19 +2,17 @@
 
 namespace App\GraphQL\Type\Laptop;
 use GraphQL\Type\Definition\Type;
-use Folklore\GraphQL\Support\Mutation;
+use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 
 
-class Peripherals extends Mutation
+class Peripherals extends GraphQLType
 {
 	protected $attributes = [
 		'name'		=> 'Peripherals',
 	];
-	public function type()
-    {
-        return GraphQL::type('Mutation');
-	}
+	//protected $inputObject = true;
+
 	public function fields()
 	{
 		return [
@@ -36,17 +34,4 @@ class Peripherals extends Mutation
 							],
 		];
 	}
-
-	public function resolve($root, $args)
-    {
-        
-        $peripherals = new Peripherals();
-        $peripherals->dimensions = $args['dimensions'];
-		$peripherals->optical_drive = $args['optical_drive'];
-		$peripherals->fingerprint_scanner = $args['fingerprint_scanner'];
-		
-        
-        $saved = $peripherals->save();
-        return $peripherals;
-    }
 }

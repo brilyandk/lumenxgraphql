@@ -12,7 +12,7 @@ class ILens extends Mutation
 	//protected $inputObject = true;
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('Lens');
 	}
     public function fields()
 	{

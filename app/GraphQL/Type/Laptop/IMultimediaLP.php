@@ -2,16 +2,20 @@
 
 namespace App\GraphQL\Type\Laptop;
 use GraphQL\Type\Definition\Type;
-use Folklore\GraphQL\Support\Type as GraphQLType;
+use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
 
 
-class IMultimedia extends GraphQLType
+
+class IMultimediaLP extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'IMultimedia',
+		'name'		=> 'IMultimediaLP',
 	];
-	protected $inputObject = true;
+	public function type()
+    {
+        return GraphQL::type('Multimedia');
+	}
 
 	public function fields()
 	{
@@ -45,4 +49,21 @@ class IMultimedia extends GraphQLType
 
 		];
 	}
+
+	public function resolve($root, $args)
+    {
+        
+        $multimedia = new Multimedia();
+        $multimedia->secondary_camrearfacing = $args['secondary_camrearfacing'];
+		$multimedia->microphone_type = $args['microphone_type'];
+		$multimedia->inbuilt_microphone = $args['inbuilt_microphone'];
+		$multimedia->webcam = $args['webcam'];
+		$multimedia->speakers = $args['speakers'];
+		$multimedia->video_recording = $args['video_recording'];
+		
+		
+        
+        $saved = $multimedia->save();
+        return $multimedia;
+    }
 }

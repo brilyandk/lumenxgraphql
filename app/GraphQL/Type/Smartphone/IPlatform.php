@@ -8,11 +8,11 @@ use GraphQL;
 class IPlatform extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'IPlatform',
+		'name'		=> 'IPlatformSM',
 	];
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('PlatformSM');
 	}
 	public function fields()
 	{

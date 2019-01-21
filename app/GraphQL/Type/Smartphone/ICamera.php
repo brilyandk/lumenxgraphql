@@ -8,12 +8,12 @@ use GraphQL;
 class ICamera extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'ICamera',
+		'name'		=> 'ICameraSM',
 	];
 	//protected $inputObject = true;
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('CameraSM');
 	}
 	public function fields()
 	{

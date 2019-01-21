@@ -5,10 +5,10 @@ use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 
-class IBattery extends GraphQLType
+class BatteryCamera extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'IBattery',
+		'name'		=> 'BatteryCamera',
 	];
 	//protected $inputObject = true;
 

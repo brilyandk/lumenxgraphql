@@ -1,19 +1,19 @@
 <?php
 
-namespace App\GraphQL\Type\Smartphone;
+namespace App\GraphQL\Type\Tablet;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
 
 
-class IBattery extends Mutation
+class IBatteryTablet extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'IBattery',
+		'name'		=> 'IBatteryTablet',
 	];
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('BatteryTablet');
 	}
 
 	public function fields()

@@ -7,9 +7,9 @@ use GraphQL;
 class Platform extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'Platform',
+		'name'		=> 'PlatformSM',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{
@@ -28,15 +28,15 @@ class Platform extends GraphQLType
                             ],
             'memory' 	    => 	[
 								'name' 	=> 'memory', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'internal_storage' 	    => 	[
 								'name' 	=> 'internal_storage', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'storage_expansion' 	    => 	[
 								'name' 	=> 'storage_expansion', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'os' 	    => 	[
 								'name' 	=> 'os', 		

@@ -4,12 +4,12 @@ use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 
-class Connectivty extends GraphQLType
+class ConnectivityLP extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'Connectivty',
+		'name'		=> 'ConnectivityLP',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{
@@ -20,11 +20,11 @@ class Connectivty extends GraphQLType
 							],
             'bluetooth'	=> 	[
 								'name' 	=> 'bluetooth', 		
-								'type' 	=> Type::nonNull(Type::bool()),
+								'type' 	=> Type::nonNull(Type::boolean()),
                             ],
             'bluetooth_features'	=> 	[
 								'name' 	=> 'bluetooth_features', 		
-								'type' 	=> Type::nonNull(Type::text()),
+								'type' 	=> Type::nonNull(Type::string()),
 							],
 		];
 	}

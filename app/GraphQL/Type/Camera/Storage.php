@@ -5,10 +5,10 @@ use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 
-class IStorage extends GraphQLType
+class Storage extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'IStorage',
+		'name'		=> 'Storage',
 	];
 	//protected $inputObject = true;
 

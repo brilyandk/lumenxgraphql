@@ -2,20 +2,16 @@
 
 namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
-use Folklore\GraphQL\Support\Mutation;
+use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 
 
-
-class ICellular extends Mutation
+class CellularSM extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'ICellularSM',
+		'name'		=> 'CellularSM',
 	];
-	public function type()
-    {
-        return GraphQL::type('CellularSM');
-	}
+	//protected $inputObject = true;
 
 	public function fields()
 	{
@@ -34,20 +30,4 @@ class ICellular extends Mutation
                             ],
 		];
 	}
-	public function resolve($root, $args)
-    {
-        
-        $cellular = new Cellular();
-        $cellular->data = $args['data'];
-		$cellular->sim_type = $args['sim_type'];
-		$cellular->volte = $args['volte'];
-		//$cellular->main_cellular_specification = $args['main_cellular_specification'];
-		
-        
-        $saved = $cellular->save();
-        return $cellular;
-    }
-
-
-
 }

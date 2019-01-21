@@ -17,7 +17,7 @@ class IPorts extends Mutation
 	*/
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('Ports');
 	}
 
 	public function fields()

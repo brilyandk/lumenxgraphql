@@ -25,72 +25,77 @@ class Camera extends GraphQLType
 
 	public function fields()
     {
+        [
+            'id_video' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
+            'id_storage' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
+            'id_lens' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
+            'id_battery' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
+            'id_connectivity' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
+            'id_exposures' => [
+              'type' => Type::nonNull(Type::int()),
+            ],
+            'id_design' => [
+                 'type' => Type::nonNull(Type::int()),
+            ],
+            'id_features' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
+            'id_sensor'=> [
+                'type' => Type::nonNull(Type::int()),
+            ],
+            'id_flash'=> [
+              'type' => Type::nonNull(Type::int()),
+          ]
+        ];
+
         return [
             'video' => [
-              'type' => Type::listOf(GraphQL::type('IVideo')),
+            'name' => 'video',
+              'type' => Type::listOf(GraphQL::type('Video')),
             ],
             'storage' => [
-                'type' => Type::listOf(GraphQL::type('IStorage')),
+                'name' => 'storage',
+                'type' => Type::listOf(GraphQL::type('Storage')),
               ],
               'lens' => [
-                'type' => Type::listOf(GraphQL::type('ILens')),
+                'name' => 'lens',
+                'type' => Type::listOf(GraphQL::type('Lens')),
               ],
               'battery' => [
-                'type' => Type::listOf(GraphQL::type('IBattery')),
+                'name' => 'battery',
+                'type' => Type::listOf(GraphQL::type('BatteryCamera')),
               ],
               'connectivity' => [
-                'type' => Type::listOf(GraphQL::type('IConnectivity')),
+                'type' => Type::listOf(GraphQL::type('Connectivity')),
               ],
               'exposures' => [
-                'type' => Type::listOf(GraphQL::type('IExposures')),
+                'type' => Type::listOf(GraphQL::type('Exposure')),
               ],
               'design' => [
-                'type' => Type::listOf(GraphQL::type('IDesign')),
+                'type' => Type::listOf(GraphQL::type('Design')),
               ],
               'features' => [
-                'type' => Type::listOf(GraphQL::type('IFeatures')),
+                'type' => Type::listOf(GraphQL::type('Features')),
               ],
               'sensor' => [
-                'type' => Type::listOf(GraphQL::type('ISensor')),
+                'type' => Type::listOf(GraphQL::type('Sensor')),
               ],
               'flash' => [
-                'type' => Type::listOf(GraphQL::type('IFlash')),
+                'type' => Type::listOf(GraphQL::type('Flash')),
               ],
         ];
 
         //untuk getID
-        [
-          'id_video' => [
-              'type' => Type::nonNull(Type::int()),
-          ],
-          'id_storage' => [
-              'type' => Type::nonNull(Type::int()),
-          ],
-          'id_lens' => [
-              'type' => Type::nonNull(Type::int()),
-          ],
-          'id_battery' => [
-              'type' => Type::nonNull(Type::int()),
-          ],
-          'id_connectivity' => [
-              'type' => Type::nonNull(Type::int()),
-          ],
-          'id_exposures' => [
-            'type' => Type::nonNull(Type::int()),
-          ],
-          'id_design' => [
-               'type' => Type::nonNull(Type::int()),
-          ],
-          'id_features' => [
-              'type' => Type::nonNull(Type::int()),
-          ],
-          'id_sensor'=> [
-              'type' => Type::nonNull(Type::int()),
-          ],
-          'id_flash'=> [
-            'type' => Type::nonNull(Type::int()),
-        ]
-      ];
     }
 
     

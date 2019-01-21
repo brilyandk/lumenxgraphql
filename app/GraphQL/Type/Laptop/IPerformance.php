@@ -18,7 +18,7 @@ class IPerformance extends Mutation
 	*/
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('Performance');
 	}
 
 	public function fields()

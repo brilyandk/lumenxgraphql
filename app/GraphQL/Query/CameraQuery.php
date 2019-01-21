@@ -8,15 +8,15 @@ use Folklore\GraphQL\Support\Query;
 
 //ini nama model yang sudah dibuat
 use App\Models\Camera\Camera;
-use App\Models\Camera\Storage;
-use App\Models\Camera\Lens;
-use App\Models\Camera\Battery;
-use App\Models\Camera\Connectivity;
-use App\Models\Camera\Exposures;
-use App\Models\Camera\Design;
-use App\Models\Camera\Features;
-use App\Models\Camera\Sensor;
-use App\Models\Camera\Flash;
+// use App\Models\Camera\Storage;
+// use App\Models\Camera\Lens;
+// use App\Models\Camera\Battery;
+// use App\Models\Camera\Connectivity;
+// use App\Models\Camera\Exposures;
+// use App\Models\Camera\Design;
+// use App\Models\Camera\Features;
+// use App\Models\Camera\Sensor;
+// use App\Models\Camera\Flash;
 
 class CameraQuery extends Query
 {

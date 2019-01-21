@@ -8,15 +8,15 @@ use Folklore\GraphQL\Support\Query;
 
 //ini nama model yang sudah dibuat
 use App\Models\Smartphone\Smartphone;
-use App\Models\Smartphone\Cellular;
-use App\Models\Smartphone\Camera;
-use App\Models\Smartphone\Battery;
-use App\Models\Smartphone\Connectivity;
-use App\Models\Smartphone\Display;
-use App\Models\Smartphone\Design;
-use App\Models\Smartphone\Features;
-use App\Models\Smartphone\Multimedia;
-use App\Models\Smartphone\Platform;
+// use App\Models\Smartphone\Cellular;
+// use App\Models\Smartphone\Camera;
+// use App\Models\Smartphone\Battery;
+// use App\Models\Smartphone\Connectivity;
+// use App\Models\Smartphone\Display;
+// use App\Models\Smartphone\Design;
+// use App\Models\Smartphone\Features;
+// use App\Models\Smartphone\Multimedia;
+// use App\Models\Smartphone\Platform;
 
 class SmartphoneQuery extends Query
 {

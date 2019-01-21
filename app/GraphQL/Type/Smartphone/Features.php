@@ -5,29 +5,29 @@ use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 
-
-class Cellular extends GraphQLType
+class Features extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'Cellular',
+		'name'		=> 'Features',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{
 		return [
-			'data'	=> 	[
-								'name' 	=> 'data', 		
+			'sensors'	=> 	[
+								'name' 	=> 'sensors', 		
 								'type' 	=> Type::nonNull(Type::string()),
 							],
-			'sim_type'	    => 	[
-								'name' 	=> 'sim_type', 		
+			'notifications'	         => 	[
+								'name' 	=> 'notifications', 		
 								'type' 	=> Type::nonNull(Type::string()),
                             ],
-            'volte' 	=> 	[
-								'name' 	=> 'volte', 		
-								'type' 	=> Type::nonNull(Type::bool()),
+            'other' => 	[
+								    'name' 	=> 'white_balance_type', 		
+								    'type' 	=> Type::nonNull(Type::string()),
                             ],
+            
 		];
 	}
 }

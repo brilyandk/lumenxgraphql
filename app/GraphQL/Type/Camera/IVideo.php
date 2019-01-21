@@ -4,6 +4,7 @@ namespace App\GraphQL\Type\Camera;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
+use App\Models\Camera\Video;  
 
 class IVideo extends Mutation
 {

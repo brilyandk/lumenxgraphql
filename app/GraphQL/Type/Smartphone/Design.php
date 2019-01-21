@@ -7,9 +7,9 @@ use GraphQL;
 class Design extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'Design',
+		'name'		=> 'DesignSM',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{
@@ -20,7 +20,7 @@ class Design extends GraphQLType
 							],
 			'weight'	    => 	[
 								'name' 	=> 'weight', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'materials' 	    => 	[
 								'name' 	=> 'materials', 		

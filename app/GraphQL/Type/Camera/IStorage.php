@@ -1,17 +1,20 @@
 <?php
-
 namespace App\GraphQL\Type\Camera;
 use GraphQL\Type\Definition\Type;
-use Folklore\GraphQL\Support\Type as GraphQLType;
+use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
+use App\Models\Camera\Storage;  
 
-class IStorage extends GraphQLType
+class IStorage extends Mutation
 {
 	protected $attributes = [
 		'name'		=> 'IStorage',
 	];
 	//protected $inputObject = true;
-
+	public function type()
+    {
+        return GraphQL::type('Storage');
+	}
 	public function fields()
 	{
 		return [
@@ -21,4 +24,16 @@ class IStorage extends GraphQLType
 							]
 		];
 	}
+
+	public function resolve($root, $args)
+    {
+        
+        $strorage = new Strorage();
+        $strorage->storage_file_system = $args['storage_file_system'];
+
+        
+        $saved = $strorage->save();
+        return $strorage;
+    }
+
 }

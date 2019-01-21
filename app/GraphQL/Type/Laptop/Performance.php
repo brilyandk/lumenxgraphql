@@ -16,7 +16,7 @@ class Performance extends GraphQLType
 	* Uncomment following line to make the type input object.
 	* http://graphql.org/learn/schema/#input-types
 	*/
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{

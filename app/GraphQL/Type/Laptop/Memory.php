@@ -10,7 +10,7 @@ class Memory extends GraphQLType
 	protected $attributes = [
 		'name'		=> 'Memory',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{
@@ -25,11 +25,11 @@ class Memory extends GraphQLType
                             ],
             'ram_speed'	=> 	[
 								'name' 	=> 'ram_speed', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'capacity'	=> 	[
 								'name' 	=> 'capacity', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'upgradeable'	=> 	[
 								'name' 	=> 'upgradeable', 		

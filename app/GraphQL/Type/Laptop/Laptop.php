@@ -28,39 +28,39 @@ class Laptop extends GraphQLType
 		return [
 			'general'		=> 	[
 								'name' 	=> 'general', 		
-								'type' 	=> Type::listOf(GraphQL::type('IGeneral')),
+								'type' 	=> Type::listOf(GraphQL::type('General')),
 							],
 			'display'		=> 	[
 								'name' 	=> 'display', 		
-								'type' 	=> Type::listOf(GraphQL::type('IDisplay')),
+								'type' 	=> Type::listOf(GraphQL::type('Display')),
                             ],
              'performance'		=> 	[
 								'name' 	=> 'performance', 		
-								'type' 	=> Type::listOf(GraphQL::type('IPerformance')),
+								'type' 	=> Type::listOf(GraphQL::type('Performance')),
                             ],
             'memory'		=> 	[
 								'name' 	=> 'memory', 		
-								'type' 	=> Type::listOf(GraphQL::type('IMemory')),
+								'type' 	=> Type::listOf(GraphQL::type('Memory')),
                             ],
              'multimedia'		=> 	[
 								'name' 	=> 'multimedia', 		
-								'type' 	=> Type::listOf(GraphQL::type('IMultimedia')),
+								'type' 	=> Type::listOf(GraphQL::type('Multimedia')),
                             ],
             'peripherals'		=> 	[
 								'name' 	=> 'peripherals', 		
-								'type' 	=> Type::listOf(GraphQL::type('IPeripherals')),
+								'type' 	=> Type::listOf(GraphQL::type('Peripherals')),
                             ],
             'connectivity'		=> 	[
 								'name' 	=> 'connectivity', 		
-								'type' 	=> Type::listOf(GraphQL::type('IConnectivity')),
+								'type' 	=> Type::listOf(GraphQL::type('ConnectivityLP')),
                             ],
             'storage'		=> 	[
 								'name' 	=> 'storage', 		
-								'type' 	=> Type::listOf(GraphQL::type('IStorage')),
+								'type' 	=> Type::listOf(GraphQL::type('Storage')),
                             ],
             'ports'		=> 	[
 								'name' 	=> 'ports', 		
-								'type' 	=> Type::listOf(GraphQL::type('IPorts')),
+								'type' 	=> Type::listOf(GraphQL::type('Ports')),
                             ],
           
                             

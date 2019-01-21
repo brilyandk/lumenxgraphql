@@ -9,9 +9,9 @@ use GraphQL;
 class Storage extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'Storage',
+		'name'		=> 'StorageLP',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{
@@ -22,7 +22,7 @@ class Storage extends GraphQLType
 							],
             'capacity'	=> 	[
 								'name' 	=> 'capacity', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
 		];
 	}

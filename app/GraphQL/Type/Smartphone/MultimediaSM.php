@@ -1,35 +1,41 @@
 <?php
-namespace App\GraphQL\Type\Laptop;
+
+namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 
-class Display extends GraphQLType
+
+class MultimediaSM extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'Display',
+		'name'		=> 'MultimediaSM',
 	];
-	//protected $inputObject = true;
+	// protected $inputObject = true;
 
 	public function fields()
 	{
 		return [
-			'type'	=> 	[
-								'name' 	=> 'type', 		
+			'screen_mirroring'	=> 	[
+								'name' 	=> 'screen_mirroring', 		
 								'type' 	=> Type::nonNull(Type::string()),
 							],
-			'resolution'	=> 	[
-								'name' 	=> 'resolution', 		
+			'speakers'	=> 	[
+								'name' 	=> 'speakers', 		
 								'type' 	=> Type::nonNull(Type::string()),
                             ],
-            'touchscreen'	=> 	[
-								'name' 	=> 'touchscreen', 		
+            'audio_jack'	=> 	[
+								'name' 	=> 'audio_jack', 		
 								'type' 	=> Type::nonNull(Type::string()),
                             ],
-            'features'	=> 	[
-								'name' 	=> 'features', 		
+            'michrophone'	=> 	[
+								'name' 	=> 'michrophone', 		
 								'type' 	=> Type::nonNull(Type::string()),
-							],
+                            ],
+
+
+
+
 		];
 	}
 }

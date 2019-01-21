@@ -11,7 +11,7 @@ class Connectivity extends GraphQLType
 	protected $attributes = [
 		'name'		=> 'Connectivity',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{

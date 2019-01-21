@@ -10,7 +10,7 @@ class Sensor extends GraphQLType
 	protected $attributes = [
 		'name'		=> 'Sensor',
 	];
-	protected $inputObject = true;
+	// protected $inputObject = true;
 
 	public function fields()
 	{

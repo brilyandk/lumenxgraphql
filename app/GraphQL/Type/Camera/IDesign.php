@@ -13,7 +13,7 @@ class IDesign extends Mutation
 	//protected $inputObject = true;
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('Design');
 	}
 	public function fields()
 	{

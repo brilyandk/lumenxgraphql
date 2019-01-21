@@ -4,39 +4,40 @@ namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
-
-class Camera extends GraphQLType
+class Display extends GraphQLType
 {
 	protected $attributes = [
-		'name'		=> 'CameraSM',
+		'name'		=> 'DisplaySM',
 	];
 	//protected $inputObject = true;
 
 	public function fields()
 	{
 		return [
-			'main_camera'	=> 	[
-								'name' 	=> 'main_camera', 		
+			'display_size'	=> 	[
+								'name' 	=> 'display_size', 		
 								'type' 	=> Type::nonNull(Type::int()),
 							],
-			'main_camera_specification'	=> 	[
-								'name' 	=> 'main_camera_specification', 		
+			'resolution'	=> 	[
+								'name' 	=> 'resolution', 		
 								'type' 	=> Type::nonNull(Type::string()),
                             ],
-            'selfie_camera'	=> 	[
-								'name' 	=> 'selfie_camera', 		
+            'pixel_density'	=> 	[
+								'name' 	=> 'pixel_density', 		
 								'type' 	=> Type::nonNull(Type::int()),
                             ],
-            'selfie_camera_specification'	=> 	[
-								'name' 	=> 'selfie_camera_specification', 		
+            'technology'	=> 	[
+								'name' 	=> 'technology', 		
 								'type' 	=> Type::nonNull(Type::string()),
 							],
-			 'video_recording'	=> 	[
-								'name' 	=> 'video_recording', 		
+			 'screen_to_body_ratio'	=> 	[
+								'name' 	=> 'screen_to_body_ratio', 		
+								'type' 	=> Type::nonNull(Type::int()),
+							],
+			'features'	=> 	[
+								'name' 	=> 'features', 		
 								'type' 	=> Type::nonNull(Type::string()),
 							],
-			
 		];
 	}
 }
-

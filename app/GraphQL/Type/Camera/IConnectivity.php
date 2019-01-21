@@ -14,7 +14,7 @@ class IConnectivity extends Mutation
 	//protected $inputObject = true;
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('Connectivity');
 	}
 	public function fields()
 	{
@@ -46,7 +46,7 @@ class IConnectivity extends Mutation
 	public function resolve($root, $args)
     {
         
-        $connectivity = new connectivity();
+        $connectivity = new Connectivity();
         $connectivity->wifi = $args['wifi'];
 		$connectivity->bluetooth = $args['bluetooth'];
 		$connectivity->usb = $args['usb'];

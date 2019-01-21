@@ -7,14 +7,14 @@ use GraphQL;
 
 
 
-class ICellular extends Mutation
+class ICellularTablet extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'ICellularSM',
+		'name'		=> 'ICellularTablet',
 	];
 	public function type()
     {
-        return GraphQL::type('CellularSM');
+        return GraphQL::type('CellularTablet');
 	}
 
 	public function fields()

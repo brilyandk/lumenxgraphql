@@ -5,14 +5,14 @@ use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
 
-class IConnectivty extends Mutation
+class IConnectivityLP extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'IConnectivty',
+		'name'		=> 'iConnectivityLP',
 	];
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('ConnectivityLP');
 	}
 
 	public function fields()

@@ -4,14 +4,14 @@ namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
-class IDesign extends GraphQLType
+class IDesign extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'IDesign',
+		'name'		=> 'IDesignSM',
 	];
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('DesignSM');
 	}
 
 	public function fields()

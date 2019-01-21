@@ -11,7 +11,7 @@ class Flash extends GraphQLType
 	protected $attributes = [
 		'name'		=> 'Flash',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{

@@ -126,13 +126,46 @@ return [
             'query' => [
                 //query ditulis di sini
                 // 'PostQuery' => App\GraphQL\Query\PostQuery::class,
-                'MonitorQuery' => App\GraphQL\Query\MonitorQuery::class,
+                //'MonitorQuery' => App\GraphQL\Query\MonitorQuery::class,
                 'CameraQuery' => App\GraphQL\Query\CameraQuery::class,
-                'LaptopQuery' => App\GraphQL\Query\LaptopQuery::class
+                'LaptopQuery' => App\GraphQL\Query\LaptopQuery::class,
+                'SmartphoneQuery' => App\GraphQL\Query\SmartphoneQuery::class
             ],
             'mutation' => [
                 // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
+                // 'Camera'    => App\GraphQL\Type\Camera\Camera::class,
+                'IVideo'    => App\GraphQL\Type\Camera\IVideo::class,
+                'IStorage'   => App\GraphQL\Type\Camera\IStorage::class,
+                'ILens'      => App\GraphQL\Type\Camera\ILens::class,
+                'IBatteryCamera'   => App\GraphQL\Type\Camera\IBatteryCamera::class,
+                'IConnectivity'   => App\GraphQL\Type\Camera\IConnectivity::class,
+                'IExposure'   => App\GraphQL\Type\Camera\IExposure::class,
+                'IDesign'   => App\GraphQL\Type\Camera\IDesign::class,
+                'IFeatures'   => App\GraphQL\Type\Camera\IFeatures::class,
+                'ISensor'   => App\GraphQL\Type\Camera\ISensor::class,
 
+                // 'Laptop'    => App\GraphQL\Type\Laptop\Laptop::class,
+                'IGeneral'    => App\GraphQL\Type\Laptop\IGeneral::class,
+                'IDisplay'    => App\GraphQL\Type\Laptop\IDisplay::class,
+                'IConnectivityLP'    => App\GraphQL\Type\Laptop\IConnectivityLP::class,
+                'IMemory'    => App\GraphQL\Type\Laptop\IMemory::class,
+                'IMultimediaLP'    => App\GraphQL\Type\Laptop\IMultimediaLP::class,
+                'IPerformance'    => App\GraphQL\Type\Laptop\IPerformance::class,
+                'IPeripherals'    => App\GraphQL\Type\Laptop\IPeripherals::class,
+                'IPorts'    => App\GraphQL\Type\Laptop\IPorts::class,
+                'IStorage'    => App\GraphQL\Type\Laptop\IStorage::class,
+
+                // 'Smartphone'        => App\GraphQL\Type\Smartphone\Smartphone::class,
+                'ICellularSM'      => App\GraphQL\Type\Smartphone\ICellular::class,
+                'ICameraSM'        => App\GraphQL\Type\Smartphone\ICamera::class,
+               'IBatterySmartphone'       => App\GraphQL\Type\Smartphone\IBatterySmartphone::class,
+                'IConnectivitySM'  => App\GraphQL\Type\Smartphone\IConnectivitySM::class,
+                'IDisplaySM'       => App\GraphQL\Type\Smartphone\IDisplay::class,
+                'IDesignSM'        => App\GraphQL\Type\Smartphone\IDesign::class,
+                'IFeaturesSM'      => App\GraphQL\Type\Smartphone\IFeatures::class,
+                'IMultimediaSM'    => App\GraphQL\Type\Smartphone\IMultimediaSM::class,
+                'IPlatfromSM'     => App\GraphQL\Type\Smartphone\IPlatform::class
+        
             ]
         ]
     ],
@@ -191,44 +224,48 @@ return [
         // App\GraphQL\Type\PostType::class,
 
         //Monitor
-        'IMonitor' => App\GraphQL\Type\Monitor\IMonitor::class,
-        'IDisplay' => App\GraphQL\Type\Monitor\IDisplay::class,
+        // 'IMonitor' => App\GraphQL\Type\Monitor\IMonitor::class,
+        // 'IDisplay' => App\GraphQL\Type\Monitor\IDisplay::class,
 
         //Camera
         'Camera'    => App\GraphQL\Type\Camera\Camera::class,
-        'IVideo'    => App\GraphQL\Type\Camera\IVideo::class,
-        'IStorage'   => App\GraphQL\Type\Camera\IStorage::class,
-        'ILens'      => App\GraphQL\Type\Camera\ILens::class,
-        'IBattery'   => App\GraphQL\Type\Camera\IBattery::class,
-        'IConnectivity'   => App\GraphQL\Type\Camera\IConnectivity::class,
-        'IExposure'   => App\GraphQL\Type\Camera\IExposure::class,
-        'IDesign'   => App\GraphQL\Type\Camera\IDesign::class,
-        'IFeatures'   => App\GraphQL\Type\Camera\IFeatures::class,
-        'ISensor'   => App\GraphQL\Type\Camera\ISensor::class,
+        'Video'    => App\GraphQL\Type\Camera\Video::class,
+        'Storage'   => App\GraphQL\Type\Camera\Storage::class,
+        'Lens'      => App\GraphQL\Type\Camera\Lens::class,
+        'BatteryCamera'   => App\GraphQL\Type\Camera\BatteryCamera::class,
+        'Connectivity'   => App\GraphQL\Type\Camera\Connectivity::class,
+        'Exposure'   => App\GraphQL\Type\Camera\Exposure::class,
+        'Design'   => App\GraphQL\Type\Camera\Design::class,
+        'Features'   => App\GraphQL\Type\Camera\Features::class,
+        'Sensor'   => App\GraphQL\Type\Camera\Sensor::class,
+        'Flash'   => App\GraphQL\Type\Camera\Flash::class,
+       
+
+        
 
         //Laptop
         'Laptop'    => App\GraphQL\Type\Laptop\Laptop::class,
-        'IGeneral'    => App\GraphQL\Type\Laptop\IGeneral::class,
-        'IDisplay'    => App\GraphQL\Type\Laptop\IDisplay::class,
-        'IConnectivity'    => App\GraphQL\Type\Laptop\IConnectivity::class,
-        'IMemory'    => App\GraphQL\Type\Laptop\IMemory::class,
-        'IMultimedia'    => App\GraphQL\Type\Laptop\IMultimedia::class,
-        'IPerformance'    => App\GraphQL\Type\Laptop\IPerformance::class,
-        'IPeripherals'    => App\GraphQL\Type\Laptop\IPeripherals::class,
-        'IPorts'    => App\GraphQL\Type\Laptop\IPorts::class,
-        'IStorage'    => App\GraphQL\Type\Laptop\IStorage::class,
+        'General'    => App\GraphQL\Type\Laptop\General::class,
+        'Display'    => App\GraphQL\Type\Laptop\Display::class,
+        'ConnectivityLP'    => App\GraphQL\Type\Laptop\ConnectivityLP::class,
+        'Memory'    => App\GraphQL\Type\Laptop\Memory::class,
+        'Multimedia'    => App\GraphQL\Type\Laptop\Multimedia::class,
+        'Performance'    => App\GraphQL\Type\Laptop\Performance::class,
+        'Peripherals'    => App\GraphQL\Type\Laptop\Peripherals::class,
+        'Ports'    => App\GraphQL\Type\Laptop\Ports::class,
+        'StorageLP'    => App\GraphQL\Type\Laptop\Storage::class,
 
         //smartphone
-        'Smartphone'    => App\GraphQL\Type\Smartphone\Smartphone::class,
-        'ICellular'      => App\Type\Smartphone\ICellular::class,
-        'ICamera'        => App\Type\Smartphone\ICamera::class,
-        'IBattery'       => App\Type\Smartphone\IBattery::class,
-        'IConnectivity'  => App\Type\Smartphone\IConnectivity::class,
-        'IDisplay'       => App\Type\Smartphone\IDisplay::class,
-        'IDesign'        => App\Type\Smartphone\IDesign::class,
-        'IFeatures'      => App\Type\Smartphone\IFeatures::class,
-        'IMultimedia'    => App\Type\Smartphone\IMultimedia::class,
-        'IPlatfrom'     => App\Type\Smartphone\IPlatform::class,
+        'Smartphone'      => App\GraphQL\Type\Smartphone\Smartphone::class,
+        'CellularSM'      => App\GraphQL\Type\Smartphone\CellularSM::class,
+        'CameraSM'        => App\GraphQL\Type\Smartphone\Camera::class,
+        'BatterySmartphone'       => App\GraphQL\Type\Smartphone\BatterySmartphone::class,
+        'ConnectivitySM'  => App\GraphQL\Type\Smartphone\ConnectivitySM::class,
+        'DisplaySM'       => App\GraphQL\Type\Smartphone\Display::class,
+        'DesignSM'        => App\GraphQL\Type\Smartphone\Design::class,
+        'FeaturesSM'      => App\GraphQL\Type\Smartphone\Features::class,
+        'MultimediaSM'    => App\GraphQL\Type\Smartphone\MultimediaSM::class,
+        'PlatformSM'     => App\GraphQL\Type\Smartphone\Platform::class
 
         // 'ISmartphone'    => App\GraphQL\Type\Laptop\ISmartphone::class,
        

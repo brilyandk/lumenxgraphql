@@ -10,7 +10,7 @@ class Features extends GraphQLType
 	protected $attributes = [
 		'name'		=> 'Features',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{

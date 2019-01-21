@@ -1,15 +1,21 @@
 <?php
 
+
 namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
-use Folklore\GraphQL\Support\Type as GraphQLType;
+use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
-class IDisplay extends GraphQLType
+
+
+class IDisplay extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'IDisplay',
+		'name'		=> 'IDisplaySM',
 	];
-	protected $inputObject = true;
+	public function type()
+    {
+        return GraphQL::type('DisplaySM');
+	}
 
 	public function fields()
 	{
@@ -40,4 +46,22 @@ class IDisplay extends GraphQLType
 							],
 		];
 	}
+
+	public function resolve($root, $args)
+    {
+        
+        $display = new Display();
+        $display->display_size = $args['display_size'];
+		$display->resolution = $args['resolution'];
+		$display->pixel_density = $args['pixel_density'];
+		$display->technology = $args['technology'];
+		$display->screen_to_body_ratio = $args['screen_to_body_ratio'];
+		$display->features = $args['features'];
+		//$display->main_display_specification = $args['main_display_specification'];
+		
+        
+        $saved = $display->save();
+        return $display;
+    }
+
 }

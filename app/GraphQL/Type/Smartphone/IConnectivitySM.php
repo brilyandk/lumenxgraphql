@@ -2,15 +2,19 @@
 
 namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
-use Folklore\GraphQL\Support\Type as GraphQLType;
+use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
 
-class IConnectivty extends GraphQLType
+class IConnectivitySM extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'IConnectivty',
+		'name'		=> 'IConnectivitySM',
 	];
-	protected $inputObject = true;
+	public function type()
+    {
+        return GraphQL::type('ConnectivitySM');
+	}
+
 
 	public function fields()
 	{
@@ -37,4 +41,20 @@ class IConnectivty extends GraphQLType
 							],
 		];
 	}
+
+	public function resolve($root, $args)
+    {
+        
+        $connectiviy = new Connectiviy();
+        $connectiviy->bluetooth= $args['bluetooth'];
+		$connectiviy->wi_fi = $args['wi_fi'];
+		$connectiviy->usb = $args['usb'];
+		$connectiviy->gps = $args['gps'];
+		$connectiviy->other = $args['other'];
+		//$connectiviy->main_connectiviy_specification = $args['main_connectiviy_specification'];
+		
+        
+        $saved = $connectiviy->save();
+        return $connectiviy;
+    }
 }

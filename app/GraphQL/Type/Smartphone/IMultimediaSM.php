@@ -2,16 +2,19 @@
 
 namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
-use Folklore\GraphQL\Support\Type as GraphQLType;
+use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
 
 
-class IMultimedia extends GraphQLType
+class IMultimediaSM extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'IMultimedia',
+		'name'		=> 'IMultimediaSM',
 	];
-	protected $inputObject = true;
+	public function type()
+    {
+        return GraphQL::type('MultimediaSM');
+	}
 
 	public function fields()
 	{
@@ -38,4 +41,19 @@ class IMultimedia extends GraphQLType
 
 		];
 	}
+
+	public function resolve($root, $args)
+    {
+        
+        $multimedia = new Multimedia();
+        $multimedia->screen_mirroring = $args['screen_mirroring'];
+		$multimedia->speakers = $args['speakers'];
+		$multimedia->audio_jack = $args['audio_jack'];
+		$multimedia->michrophones = $args['michrophone'];
+		//$multimedia->main_multimedia_specification = $args['main_multimedia_specification'];
+		
+        
+        $saved = $multimedia->save();
+        return $multimedia;
+    }
 }

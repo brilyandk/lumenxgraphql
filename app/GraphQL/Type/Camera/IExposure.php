@@ -9,11 +9,11 @@ class IExposure extends Mutation
 	protected $attributes = [
 		'name'		=> 'IExposure',
 	];
-	protected $inputObject = true;
+	// protected $inputObject = true;
 
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('Exposure');
 	}
 
 	public function fields()

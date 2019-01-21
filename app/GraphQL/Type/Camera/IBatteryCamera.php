@@ -4,15 +4,15 @@ use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
 use GraphQL;
 
-class IBattery extends Mutation
+class IBatteryCamera extends Mutation
 {
 	protected $attributes = [
-		'name'		=> 'IBattery',
+		'name'		=> 'IBatteryCamera',
 	];
 	//protected $inputObject = true;
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('BatteryCamera');
 	}
 	
 	public function fields()

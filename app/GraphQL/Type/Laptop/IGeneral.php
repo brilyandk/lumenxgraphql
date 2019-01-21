@@ -14,7 +14,7 @@ class IGeneral extends Mutation
 
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('General');
 	}
 
 	public function fields()

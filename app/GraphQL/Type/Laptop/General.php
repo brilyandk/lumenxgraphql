@@ -10,7 +10,7 @@ class General extends GraphQLType
 	protected $attributes = [
 		'name'		=> 'General',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{

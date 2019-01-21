@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Laptop\GraphQL\Query;
+namespace App\GraphQL\Query;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;

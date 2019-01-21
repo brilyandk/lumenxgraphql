@@ -12,7 +12,7 @@ class IMemory extends Mutation
 	];
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('Memory');
 	}
 
 	public function fields()

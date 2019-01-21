@@ -13,7 +13,7 @@ class IFeatures extends Mutation
 	//protected $inputObject = true;
 	public function type()
     {
-        return GraphQL::type('Mutation');
+        return GraphQL::type('Features');
 	}
 	public function fields()
 	{

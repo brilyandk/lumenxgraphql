@@ -1,40 +1,38 @@
 <?php
 
-namespace App\GraphQL\Type\Laptop;
+namespace App\GraphQL\Type\Smartphone;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 
-
-class Ports extends GraphQLType
+class ConnectivitySM extends GraphQLType
 {
 	protected $attributes = [
-		'name'				=> 'Ports',
+		'name'		=> 'ConnectivitySM',
 	];
-
-	/*
-	* Uncomment following line to make the type input object.
-	* http://graphql.org/learn/schema/#input-types
-	*/
 	//protected $inputObject = true;
 
 	public function fields()
 	{
 		return [
-			'sd_card_reader'	=> 	[
-								'name' 	=> 'sd_card_reader', 		
-								'type' 	=> Type::nonNull(Type::boolean()),
+			'bluetooth'	=> 	[
+								'name' 	=> 'bluetooth', 		
+								'type' 	=> Type::nonNull(Type::string()),
 							],
-			'headphone_jack'	=> 	[
-								'name' 	=> 'headphone_jack', 		
+            'wi_fi'	=> 	[
+								'name' 	=> 'wi_fi', 		
 								'type' 	=> Type::nonNull(Type::string()),
 							],
 			'usb'	=> 	[
 								'name' 	=> 'usb', 		
 								'type' 	=> Type::nonNull(Type::string()),
+							],
+			'gps'	=> 	[
+								'name' 	=> 'gps', 		
+								'type' 	=> Type::nonNull(Type::string()),
                             ],
-            'microphone_Jack'	=> 	[
-								'name' 	=> 'microphone_Jack', 		
+            'other'	=> 	[
+								'name' 	=> 'other', 		
 								'type' 	=> Type::nonNull(Type::string()),
 							],
 		];

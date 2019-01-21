@@ -10,7 +10,7 @@ class Design extends GraphQLType
 	protected $attributes = [
 		'name'		=> 'Design',
 	];
-	protected $inputObject = true;
+	//protected $inputObject = true;
 
 	public function fields()
 	{
@@ -21,7 +21,7 @@ class Design extends GraphQLType
 							],
 			'weight'	    => 	[
 								'name' 	=> 'weight', 		
-								'type' 	=> Type::nonNull(Type::integer()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'rugged' 	    => 	[
 								'name' 	=> 'rugged', 		
