@@ -15,7 +15,7 @@ class IFlash extends Mutation
     {
         return GraphQL::type('Flash');
 	}
-	public function fields()
+	public function args()
 	{
 		return [
 			'hot_shoeflash_mount'	=> 	[

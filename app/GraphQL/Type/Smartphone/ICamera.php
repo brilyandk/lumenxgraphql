@@ -15,28 +15,28 @@ class ICamera extends Mutation
     {
         return GraphQL::type('CameraSM');
 	}
-	public function fields()
+	public function args()
 	{
 		return [
 			'main_camera'	=> 	[
 								'name' 	=> 'main_camera', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'main_camera_specification'	=> 	[
 								'name' 	=> 'main_camera_specification', 		
-								'type' 	=> Type::nonNull(Type::text()),
+								'type' 	=> Type::nonNull(Type::string()),
                             ],
             'selfie_camera'	=> 	[
 								'name' 	=> 'selfie_camera', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'selfie_camera_specification'	=> 	[
 								'name' 	=> 'selfie_camera_specification', 		
-								'type' 	=> Type::nonNull(Type::text()),
+								'type' 	=> Type::nonNull(Type::string()),
 							],
 			 'video_recording'	=> 	[
 								'name' 	=> 'video_recording', 		
-								'type' 	=> Type::nonNull(Type::text()),
+								'type' 	=> Type::nonNull(Type::string()),
 							],
 			
 		];

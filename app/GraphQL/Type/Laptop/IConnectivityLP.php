@@ -15,7 +15,7 @@ class IConnectivityLP extends Mutation
         return GraphQL::type('ConnectivityLP');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'wireless_lan'	=> 	[
@@ -24,7 +24,7 @@ class IConnectivityLP extends Mutation
 							],
             'bluetooth'	=> 	[
 								'name' 	=> 'bluetooth', 		
-								'type' 	=> Type::nonNull(Type::bool()),
+								'type' 	=> Type::nonNull(Type::boolean()),
                             ],
             'bluetooth_features'	=> 	[
 								'name' 	=> 'bluetooth_features', 		

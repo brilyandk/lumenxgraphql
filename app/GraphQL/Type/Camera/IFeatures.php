@@ -15,7 +15,7 @@ class IFeatures extends Mutation
     {
         return GraphQL::type('Features');
 	}
-	public function fields()
+	public function args()
 	{
 		return [
 			'touch_focus'	=> 	[

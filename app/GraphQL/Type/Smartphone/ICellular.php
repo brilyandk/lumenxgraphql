@@ -17,7 +17,7 @@ class ICellular extends Mutation
         return GraphQL::type('CellularSM');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'data'	=> 	[

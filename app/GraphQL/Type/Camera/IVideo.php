@@ -16,7 +16,7 @@ class IVideo extends Mutation
     {
         return GraphQL::type('Video');
     }
-	public function fields()
+	public function args()
 	{
 		return [
 			'resolution_available'	=> 	[

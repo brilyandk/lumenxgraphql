@@ -15,7 +15,7 @@ class IBatteryCamera extends Mutation
         return GraphQL::type('BatteryCamera');
 	}
 	
-	public function fields()
+	public function args()
 	{
 		return [
 			'battery_type'	=> 	[

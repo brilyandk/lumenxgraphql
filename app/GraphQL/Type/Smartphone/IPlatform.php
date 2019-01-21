@@ -14,7 +14,7 @@ class IPlatform extends Mutation
     {
         return GraphQL::type('PlatformSM');
 	}
-	public function fields()
+	public function args()
 	{
 		return [
 			'system_chip'	=> 	[
@@ -31,15 +31,15 @@ class IPlatform extends Mutation
                             ],
             'memory' 	    => 	[
 								'name' 	=> 'memory', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'internal_storage' 	    => 	[
 								'name' 	=> 'internal_storage', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'storage_expansion' 	    => 	[
 								'name' 	=> 'storage_expansion', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'os' 	    => 	[
 								'name' 	=> 'os', 		

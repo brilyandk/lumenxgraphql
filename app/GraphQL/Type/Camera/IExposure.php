@@ -16,7 +16,7 @@ class IExposure extends Mutation
         return GraphQL::type('Exposure');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'exposure_lock'	    => 	[

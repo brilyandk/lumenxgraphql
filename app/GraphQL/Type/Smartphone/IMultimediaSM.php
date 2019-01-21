@@ -16,7 +16,7 @@ class IMultimediaSM extends Mutation
         return GraphQL::type('MultimediaSM');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'screen_mirroring'	=> 	[

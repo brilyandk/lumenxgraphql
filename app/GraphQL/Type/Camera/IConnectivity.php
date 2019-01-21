@@ -16,7 +16,7 @@ class IConnectivity extends Mutation
     {
         return GraphQL::type('Connectivity');
 	}
-	public function fields()
+	public function args()
 	{
 		return [
 			'wifi'		=> 	[

@@ -20,7 +20,7 @@ class IPorts extends Mutation
         return GraphQL::type('Ports');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'sd_card_reader'	=> 	[

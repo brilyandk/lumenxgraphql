@@ -15,7 +15,7 @@ class IMemory extends Mutation
         return GraphQL::type('Memory');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'ram_type'	=> 	[
@@ -28,11 +28,11 @@ class IMemory extends Mutation
                             ],
             'ram_speed'	=> 	[
 								'name' 	=> 'ram_speed', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'capacity'	=> 	[
 								'name' 	=> 'capacity', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'upgradeable'	=> 	[
 								'name' 	=> 'upgradeable', 		

@@ -17,12 +17,12 @@ class IMultimediaLP extends Mutation
         return GraphQL::type('Multimedia');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'secondary_camrearfacing'	=> 	[
 								'name' 	=> 'secondary_camrearfacing', 		
-								'type' 	=> Type::nonNull(Type::bool()),
+								'type' 	=> Type::nonNull(Type::boolean()),
 							],
 			'microphone_type'	=> 	[
 								'name' 	=> 'microphone_type', 		
@@ -30,11 +30,11 @@ class IMultimediaLP extends Mutation
                             ],
             'inbuilt_microphone'	=> 	[
 								'name' 	=> 'inbuilt_microphone', 		
-								'type' 	=> Type::nonNull(Type::bool()),
+								'type' 	=> Type::nonNull(Type::boolean()),
                             ],
             'webcam'	=> 	[
 								'name' 	=> 'webcam', 		
-								'type' 	=> Type::nonNull(Type::bool()),
+								'type' 	=> Type::nonNull(Type::boolean()),
                             ],
             'speakers'	=> 	[
 								'name' 	=> 'speakers', 		

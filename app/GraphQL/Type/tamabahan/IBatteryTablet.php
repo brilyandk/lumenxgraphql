@@ -16,7 +16,7 @@ class IBatteryTablet extends Mutation
         return GraphQL::type('BatteryTablet');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'capacity'	=> 	[

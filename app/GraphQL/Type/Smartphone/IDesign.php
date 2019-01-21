@@ -14,7 +14,7 @@ class IDesign extends Mutation
         return GraphQL::type('DesignSM');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'dimensions'	=> 	[
@@ -23,7 +23,7 @@ class IDesign extends Mutation
 							],
 			'weight'	    => 	[
 								'name' 	=> 'weight', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'materials' 	    => 	[
 								'name' 	=> 'materials', 		

@@ -14,7 +14,7 @@ class ILens extends Mutation
     {
         return GraphQL::type('Lens');
 	}
-    public function fields()
+    public function args()
 	{
 		return [
 			'focal_length'	=> 	[

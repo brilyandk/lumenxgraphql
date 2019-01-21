@@ -17,7 +17,7 @@ class IGeneral extends Mutation
         return GraphQL::type('General');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'dimensions'	=> 	[

@@ -14,7 +14,7 @@ class IDisplay extends Mutation
         return GraphQL::type('Display');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'type'	=> 	[
@@ -31,7 +31,7 @@ class IDisplay extends Mutation
                             ],
             'features'	=> 	[
 								'name' 	=> 'features', 		
-								'type' 	=> Type::nonNull(Type::text()),
+								'type' 	=> Type::nonNull(Type::string()),
 							],
 		];
 	}

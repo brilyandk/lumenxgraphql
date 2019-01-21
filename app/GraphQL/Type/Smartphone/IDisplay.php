@@ -22,7 +22,7 @@ class IDisplay extends Mutation
 		return [
 			'display_size'	=> 	[
 								'name' 	=> 'display_size', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'resolution'	=> 	[
 								'name' 	=> 'resolution', 		
@@ -30,19 +30,19 @@ class IDisplay extends Mutation
                             ],
             'pixel_density'	=> 	[
 								'name' 	=> 'pixel_density', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'technology'	=> 	[
 								'name' 	=> 'technology', 		
-								'type' 	=> Type::nonNull(Type::text()),
+								'type' 	=> Type::nonNull(Type::string()),
 							],
 			 'screen_to_body_ratio'	=> 	[
 								'name' 	=> 'screen_to_body_ratio', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'features'	=> 	[
 								'name' 	=> 'features', 		
-								'type' 	=> Type::nonNull(Type::text()),
+								'type' 	=> Type::nonNull(Type::string()),
 							],
 		];
 	}

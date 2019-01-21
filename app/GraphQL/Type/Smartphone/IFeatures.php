@@ -15,7 +15,7 @@ class IFeatures extends Mutation
     {
         return GraphQL::type('FeaturesSM');
 	}
-	public function fields()
+	public function args()
 	{
 		return [
 			'sensors'	=> 	[
@@ -28,7 +28,7 @@ class IFeatures extends Mutation
                             ],
             'other' => 	[
 								    'name' 	=> 'white_balance_type', 		
-								    'type' 	=> Type::nonNull(Type::text()),
+								    'type' 	=> Type::nonNull(Type::string()),
                             ],
             
 		];

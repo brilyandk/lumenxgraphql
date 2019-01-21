@@ -15,7 +15,7 @@ class IPeripherals extends Mutation
     {
         return GraphQL::type('Peripherals');
 	}
-	public function fields()
+	public function args()
 	{
 		return [
 			'keyboard'	=> 	[

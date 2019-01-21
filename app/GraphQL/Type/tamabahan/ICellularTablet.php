@@ -17,7 +17,7 @@ class ICellularTablet extends Mutation
         return GraphQL::type('CellularTablet');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'data'	=> 	[

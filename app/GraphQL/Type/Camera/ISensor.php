@@ -17,7 +17,7 @@ class ISensor extends Mutation
         return GraphQL::type('Sensor');
 	}
 	
-	public function fields()
+	public function args()
 	{
 		return [
 			'processor_model'	=> 	[

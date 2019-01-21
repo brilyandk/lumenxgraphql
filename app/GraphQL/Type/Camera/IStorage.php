@@ -15,7 +15,7 @@ class IStorage extends Mutation
     {
         return GraphQL::type('Storage');
 	}
-	public function fields()
+	public function args()
 	{
 		return [
 			'storage_file_system'	=> 	[

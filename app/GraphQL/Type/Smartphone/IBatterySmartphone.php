@@ -16,20 +16,20 @@ class IBatterySmartphone extends Mutation
         return GraphQL::type('BatterySmartphone');
 	}
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'capacity'	=> 	[
 								'name' 	=> 'capacity', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
 							],
 			'fast_charging'	    => 	[
 								'name' 	=> 'fast_charging', 		
-								'type' 	=> Type::nonNull(Type::number()),
+								'type' 	=> Type::nonNull(Type::int()),
                             ],
             'wireless_charging' 	=> 	[
 								'name' 	=> 'wireless_charging', 		
-								'type' 	=> Type::nonNull(Type::bool()),
+								'type' 	=> Type::nonNull(Type::boolean()),
                             ],
 		];
 	}

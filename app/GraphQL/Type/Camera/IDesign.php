@@ -15,7 +15,7 @@ class IDesign extends Mutation
     {
         return GraphQL::type('Design');
 	}
-	public function fields()
+	public function args()
 	{
 		return [
 			'dimensions'	=> 	[

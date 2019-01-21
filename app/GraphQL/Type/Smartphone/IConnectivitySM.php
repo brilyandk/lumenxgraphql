@@ -16,7 +16,7 @@ class IConnectivitySM extends Mutation
 	}
 
 
-	public function fields()
+	public function args()
 	{
 		return [
 			'bluetooth'	=> 	[
